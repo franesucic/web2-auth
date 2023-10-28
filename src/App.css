@@ -1,0 +1,258 @@
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: peachpuff;
+}
+
+#login-button {
+    width: 200px;
+    height: 80px;
+    border-radius: 20px;
+    border:none;
+    font-size: 25px;
+}
+
+#login-button:hover {
+    cursor: pointer;
+    background-color: gainsboro;
+}
+
+#logout-button {
+    width: 200px;
+    height: 80px;
+    border-radius: 20px;
+    border: none;
+    font-size: 25px;
+}
+
+#logout-button:hover {
+    cursor: pointer;
+    background-color: gainsboro;
+}
+
+#confirm-button {
+    height: 50px;
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: large;
+}
+
+#confirm-button:hover {
+    cursor: pointer;
+    background-color: gainsboro;
+}
+
+#confirm-div {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons-div {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.user-data {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#name-input {
+    width: 200px;
+    height: 25px;
+    border: none;
+    border-radius: 10px;
+}
+
+#players-input {
+    padding: 5px;
+    height: 100px;
+    width: 200px;
+    border: none;
+    border-radius: 10px;
+}
+
+.form-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    column-gap: 30px;
+}
+
+.logged-user-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.all-tours {
+    border-top: 1px solid black;
+    padding-top: 2%;
+    margin-top: 3%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.all-tours-title {
+    font-size: large;
+    font-weight: 600;
+}
+
+.all-tours-lines {
+    margin-top: 10px;
+}
+
+#system-input {
+    width: 25px;
+    height: 20px;
+    border: none;
+    border-radius: 7px;
+}
+
+.error {
+    font: 15px;
+    color: red;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.succ-msg {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.table-title {
+    padding-top: 2%;
+    text-align: center;
+    font-size: x-large;
+    padding-bottom: 2%;
+    margin-bottom: 2%;
+    border-bottom: 2px solid black;
+}
+
+.table-title div {
+    margin-bottom: 20px;
+}
+
+#logout-div {
+    margin-left: 3%;
+    margin-bottom: 2%;
+}
+
+#logout-div button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+}
+
+#logout-div button:hover {
+    background-color: gainsboro;
+    cursor: pointer;
+}
+
+table {
+    background-color: black;
+}
+
+thead td {
+    background-color: grey;
+    width: 150px;
+    height: 40px;
+}
+
+td {
+    background-color: beige;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+}
+
+.table-div {
+    display: flex;
+    justify-content: center;
+}
+
+#round {
+    width: 50px;
+}
+
+#title {
+    text-align: center;
+    margin-bottom: 2%;
+    font-size: x-large;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    column-gap: 10%;
+    margin-bottom: 5%;
+}
+
+
+.result-input-div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 30px;
+    height: 260px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: beige;
+}
+
+.result-input-div span {
+    margin-top: 15px;
+}
+
+.result-input-div label {
+    text-align: center;
+}
+
+.result-input-div button {
+    border: none;
+    margin-top: 10px;
+    height: 40px;
+    border-radius: 20px;
+}
+.result-input-div button:hover {
+    cursor: pointer;
+    background-color: gainsboro;
+}
+
+.result-input-div input {
+    border: none;
+    border-radius: 5px;
+    border-bottom: 1px solid black;
+}
+
+.num-input {
+    width: 30px;
+}
+
+#res-div {
+    display: flex;
+    justify-content: space-around;
+}
+
+#show-table {
+    border: none;
+    width: 170px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+#show-table:hover {
+    cursor: pointer;
+    background-color: gainsboro;
+}
