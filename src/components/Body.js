@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import {firestore} from "../firebase"
 import {getDocs, addDoc, collection} from "@firebase/firestore"
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, Link, useLocation } from 'react-router-dom';
 
 function Body() {
 
@@ -178,7 +178,7 @@ function Body() {
           try {
             const docRef = await addDoc(ref, data);
             console.log(docRef.id)
-            localStorage.setItem(1, docRef.id);
+            //localStorage.setItem(1, docRef.id);
           } catch (err) {
             console.log(err);
           }
@@ -262,7 +262,7 @@ function Body() {
               <div>
                 {
                   tournaments.map((element, index) => (
-                    <div className="all-tours-lines" key={index}> • <Link to="/tour" onClick={() => localStorage.setItem(1, element.id)}>{element.naziv}</Link></div>
+                    <div className="all-tours-lines" key={index}> • <Link to={`/tour/?id=${element.id}`}>{element.naziv}</Link></div>
                   ))
                 }
               </div>

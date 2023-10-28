@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import {firestore} from "./firebase"
 import {getDocs, collection, setDoc, doc} from "@firebase/firestore"
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 function Tournament() {
 
@@ -17,8 +17,12 @@ function Tournament() {
     const [secondPoints, setSecondPoints] = useState();
     const [show, setShow] = useState(false);
     const [table, setTable] = useState([]);
+    const [url, setUrl] = useState("");
 
     const navigate = useNavigate();
+    const location = useLocation();
+    const searchParams = new URLSearchParams(location.search);
+    const id = searchParams.get('id');
 
     let points = [-1,-1,-1,-1,-1,-1,-1,-1];
 
@@ -29,7 +33,8 @@ function Tournament() {
                 const documents = querySnapshot.docs.map((doc) => ({...doc.data(), id:doc.id }));
                 for (let i = 0; i < documents.length; ++i) {
                     //if (documents[i].kreator === user.email) {
-                        if (documents[i].id === localStorage.getItem(1)) {
+                        //if (documents[i].id === localStorage.getItem(1)) {
+                            if (documents[i].id === id) {
                         let obj = {
                             id: documents[i].id,
                             naziv: documents[i].naziv,
@@ -41,6 +46,7 @@ function Tournament() {
                             sudionici: documents[i].sudionici
                         }
                         setCurrTour(obj);
+                        setUrl("https://web2-auth.vercel.app/tour&");
                     }
                 }
             } catch (err) {
@@ -184,6 +190,7 @@ function Tournament() {
         </div>
         { isAuthenticated ? <div id='logout-div'>
             <button onClick={handleLogout}>Odjava</button>
+            <div>Poveznica: https://web2-auth.vercel.app/?={id}</div>
         </div> : ""}
         <div className='container'>
         <div className='table-div'>
