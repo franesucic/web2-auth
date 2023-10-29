@@ -4,6 +4,8 @@ import { useAuth0 } from '@auth0/auth0-react';
 import {firestore} from "./firebase"
 import {getDocs, collection, setDoc, doc} from "@firebase/firestore"
 import { useNavigate, useLocation } from 'react-router-dom';
+import { FaRegCopy } from 'react-icons/fa';
+import { TiTickOutline } from 'react-icons/ti';
 
 function Tournament() {
 
@@ -18,6 +20,7 @@ function Tournament() {
     const [show, setShow] = useState(false);
     const [table, setTable] = useState([]);
     const [url, setUrl] = useState("");
+    const [copy, setCopy] = useState(false);
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -188,7 +191,7 @@ function Tournament() {
         </div>
         { isAuthenticated ? <div id='logout-div'>
             <button onClick={handleLogout}>Odjava</button>
-            {user.email === currTour.kreator ? <div className='link-div'><span><b>Poveznica:</b></span> https://web2-auth.vercel.app/tour/?id={id} <button onClick={() => {navigator.clipboard.writeText(url)}}></button></div> : ""}
+            {user.email === currTour.kreator ? <div className='link-div'><span><b>Poveznica:</b></span> https://web2-auth.vercel.app/tour/?id={id}<button onClick={() => {navigator.clipboard.writeText(url);setCopy(true);}}>{copy ? <TiTickOutline /> : <FaRegCopy />}</button></div> : ""}
         </div> : ""}
         <div className='container'>
         <div className='table-div'>

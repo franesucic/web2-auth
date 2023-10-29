@@ -144,6 +144,8 @@ body {
 }
 
 .link-div {
+    display: flex;
+    align-items: center;
     margin-top: 10px;
     color: rgb(0, 89, 255);
 }
@@ -154,6 +156,7 @@ body {
 
 #logout-div {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     margin-left: 3%;
     margin-bottom: 2%;
