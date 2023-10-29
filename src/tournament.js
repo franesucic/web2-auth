@@ -308,7 +308,7 @@ function Tournament() {
                 }
             </table>
         </div>
-        { user.email === currTour.kreator ? <div>
+        { user && user.email === currTour.kreator ? <div>
             <div className='result-input-div'>
                 <div>UNOS REZULTATA UTAKMICE:</div>
                 <label>Prva momčad </label><input type='text' onChange={handleFirstTeamChange}></input>
