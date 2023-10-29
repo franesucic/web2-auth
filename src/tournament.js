@@ -9,7 +9,7 @@ import { TiTickOutline } from 'react-icons/ti';
 
 function Tournament() {
 
-    const { loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
+    const { logout, user, isAuthenticated } = useAuth0();
 
     const ref = collection(firestore, "natjecanja");
     const [currTour, setCurrTour] = useState({});
@@ -120,6 +120,7 @@ function Tournament() {
         return brojB - brojA;
         });
         setTable(points);
+        console.log(table);
         setShow(!show);
     }
 
@@ -332,35 +333,35 @@ function Tournament() {
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1.</td><td>{table[0].split(" ")[1]}</td><td>{table[0].split(" ")[0]}</td>
+                        <td>1.</td><td>{table[0].split(" ")[1]} {table[0].split(" ").length > 2 ? table[0].split(" ")[2] : ""}</td><td>{table[0].split(" ")[0]}</td>
                     </tr>
                     <tr>
-                        <td>2.</td><td>{table[1].split(" ")[1]}</td><td>{table[1].split(" ")[0]}</td>
+                        <td>2.</td><td>{table[1].split(" ")[1]} {table[1].split(" ").length > 2 ? table[1].split(" ")[2] : ""}</td><td>{table[1].split(" ")[0]}</td>
                     </tr>
                     <tr>
-                        <td>3.</td><td>{table[2].split(" ")[1]}</td><td>{table[2].split(" ")[0]}</td>
+                        <td>3.</td><td>{table[2].split(" ")[1]} {table[2].split(" ").length > 2 ? table[2].split(" ")[2] : ""}</td><td>{table[2].split(" ")[0]}</td>
                     </tr>
                     <tr>
-                        <td>4.</td><td>{table[3].split(" ")[1]}</td><td>{table[3].split(" ")[0]}</td>
+                        <td>4.</td><td>{table[3].split(" ")[1]} {table[3].split(" ").length > 2 ? table[3].split(" ")[2] : ""}</td><td>{table[3].split(" ")[0]}</td>
                     </tr>
                     {currTour.sudionici.length > 4 ?
                     <tr>
-                        <td>5.</td><td>{table[4].split(" ")[1]}</td><td>{table[4].split(" ")[0]}</td>
+                        <td>5.</td><td>{table[4].split(" ")[1]} {table[4].split(" ").length > 2 ? table[4].split(" ")[2] : ""}</td><td>{table[4].split(" ")[0]}</td>
                     </tr>
                 : ""}
                 {currTour.sudionici.length > 5 ?
                     <tr>
-                        <td>6.</td><td>{table[5].split(" ")[1]}</td><td>{table[5].split(" ")[0]}</td>
+                        <td>6.</td><td>{table[5].split(" ")[1]} {table[5].split(" ").length > 2 ? table[5].split(" ")[2] : ""}</td><td>{table[5].split(" ")[0]}</td>
                     </tr>
                 : ""}
                 {currTour.sudionici.length > 6 ?
                     <tr>
-                        <td>7.</td><td>{table[6].split(" ")[1]}</td><td>{table[6].split(" ")[0]}</td>
+                        <td>7.</td><td>{table[6].split(" ")[1]} {table[6].split(" ").length > 2 ? table[6].split(" ")[2] : ""}</td><td>{table[6].split(" ")[0]}</td>
                     </tr>
                 : ""}
                 {currTour.sudionici.length > 7 ?
                     <tr>
-                        <td>8.</td><td>{table[7].split(" ")[1]}</td><td>{table[7].split(" ")[0]}</td>
+                        <td>8.</td><td>{table[7].split(" ")[1]} {table[7].split(" ").length > 2 ? table[7].split(" ")[2] : ""}</td><td>{table[7].split(" ")[0]}</td>
                     </tr>
                 : ""}
                 </tbody>

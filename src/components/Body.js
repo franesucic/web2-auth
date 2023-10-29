@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import {firestore} from "../firebase"
 import {getDocs, addDoc, collection} from "@firebase/firestore"
-import { useNavigate, Link, useLocation } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 function Body() {
 
