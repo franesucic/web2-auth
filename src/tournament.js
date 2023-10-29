@@ -129,7 +129,7 @@ function Tournament() {
         const firstPromise = new Promise((resolve, reject) => {
         for (let i = 0; i < currTour.igre.length; ++i) {
             obj.push(currTour.igre[i]);
-            if ((currTour.igre[i].split("-")[1].trim() === firstTeam) && (currTour.igre[i].split("-")[2].trim() === secondTeam)) {
+            if ((currTour.igre[i].split("-")[1].trim().toLowerCase() === firstTeam.toLowerCase()) && (currTour.igre[i].split("-")[2].trim().toLowerCase() === secondTeam.toLowerCase())) {
                 let newString = "";
                 if (currTour.igre[i].split("-").length > 3) {
                     newString = currTour.igre[i].split("-")[0].trim() + "-" + currTour.igre[i].split("-")[1].trim() + "-" + currTour.igre[i].split("-")[2].trim() + "-" + firstPoints + "-" + secondPoints;
