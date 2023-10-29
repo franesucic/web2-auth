@@ -191,7 +191,7 @@ function Tournament() {
         </div>
         { isAuthenticated ? <div id='logout-div'>
             <button onClick={handleLogout}>Odjava</button>
-            {user.email === currTour.kreator ? <div className='link-div'><span><b>Poveznica: </b></span> https://web2-auth.vercel.app/tour/?id={id}<button id="copy-button" onClick={() => {navigator.clipboard.writeText(url);setCopy(true);}}>{copy ? <TiTickOutline /> : <FaRegCopy />}</button></div> : ""}
+            {user.email === currTour.kreator ? <div className='link-div'><span><b>Poveznica: </b></span> https://web2-auth.vercel.app/tour/?id={id}<button style={{width:"50px"}} onClick={() => {navigator.clipboard.writeText(url);setCopy(true);}}>{copy ? <TiTickOutline /> : <FaRegCopy />}</button></div> : ""}
         </div> : ""}
         <div className='container'>
         <div className='table-div'>
