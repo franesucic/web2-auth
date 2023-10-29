@@ -45,7 +45,6 @@ function Tournament() {
                             sudionici: documents[i].sudionici
                         }
                         setCurrTour(obj);
-                        setUrl("https://web2-auth.vercel.app/tour&");
                     }
                 }
             } catch (err) {
