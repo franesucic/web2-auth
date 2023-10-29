@@ -151,8 +151,8 @@ function Tournament() {
                 let nasao1 = false;
                 let nasao2 = false;
                 for (let i = 0; i < currTour.sudionici.length; ++i) {
-                    if (firstTeam === currTour.sudionici[i]) nasao1 = true;
-                    if (secondTeam === currTour.sudionici[i]) nasao2 = true;
+                    if (firstTeam.toLowerCase() === currTour.sudionici[i].toLowerCase()) nasao1 = true;
+                    if (secondTeam.toLowerCase() === currTour.sudionici[i].toLowerCase()) nasao2 = true;
                 }
                 if (nasao1 && nasao2) {
                     updateDocument(currTour.id, {igre: obj}).then(() => window.location.reload());
