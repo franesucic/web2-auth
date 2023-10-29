@@ -27,14 +27,13 @@ function Tournament() {
     let points = [-1,-1,-1,-1,-1,-1,-1,-1];
 
     useEffect(() => {
+        setUrl(window.location.href);
         const fetchData = async () => {
             try {
                 const querySnapshot = await getDocs(ref);
                 const documents = querySnapshot.docs.map((doc) => ({...doc.data(), id:doc.id }));
                 for (let i = 0; i < documents.length; ++i) {
-                    //if (documents[i].kreator === user.email) {
-                        //if (documents[i].id === localStorage.getItem(1)) {
-                            if (documents[i].id === id) {
+                    if (documents[i].id === id) {
                         let obj = {
                             id: documents[i].id,
                             naziv: documents[i].naziv,
@@ -190,7 +189,7 @@ function Tournament() {
         </div>
         { isAuthenticated ? <div id='logout-div'>
             <button onClick={handleLogout}>Odjava</button>
-            {user.email === currTour.kreator ? <div className='link-div'><span><b>Poveznica:</b></span> https://web2-auth.vercel.app/tour/?id={id}</div> : ""}
+            {user.email === currTour.kreator ? <div className='link-div'><span><b>Poveznica:</b></span> https://web2-auth.vercel.app/tour/?id={id} <button onClick={() => {navigator.clipboard.writeText(url)}}></button></div> : ""}
         </div> : ""}
         <div className='container'>
         <div className='table-div'>
