@@ -146,10 +146,6 @@ body {
 .link-div {
     margin-top: 10px;
     color: rgb(0, 89, 255);
-    background-color: gainsboro;
-    border: none;
-    border-radius: 20px;
-    height: 40px;
 }
 
 .link-div span {
