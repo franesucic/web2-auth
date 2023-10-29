@@ -147,11 +147,10 @@ body {
     display: flex;
     align-items: center;
     column-gap: 20px;
-    margin-top: 10px;
     color: rgb(0, 89, 255);
 }
 
-.link-div button {
+#copy-button {
     width: 50px;
 }
 
