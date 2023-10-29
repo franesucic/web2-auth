@@ -144,12 +144,16 @@ body {
 }
 
 .link-div {
-    margin-top: 30px;
+    margin-top: 10px;
     color: rgb(0, 89, 255);
 }
 
 .link-div span {
     color: black;
+    background-color: gainsboro;
+    border: none;
+    border-radius: 20px;
+    height: 40px;
 }
 
 #logout-div {
