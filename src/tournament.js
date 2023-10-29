@@ -190,7 +190,7 @@ function Tournament() {
         </div>
         { isAuthenticated ? <div id='logout-div'>
             <button onClick={handleLogout}>Odjava</button>
-            <div className='link-div'><b>Poveznica:</b> https://web2-auth.vercel.app/tour/?id={id}</div>
+            <div className='link-div'><span><b>Poveznica:</b></span> https://web2-auth.vercel.app/tour/?id={id}</div>
         </div> : ""}
         <div className='container'>
         <div className='table-div'>

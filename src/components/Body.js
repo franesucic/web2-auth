@@ -132,6 +132,7 @@ function Body() {
 
     const handleUserInput = async (e) => {
         e.preventDefault();
+        let docRef;
 
         const nameValidationPromise = new Promise((resolve, reject) => {
             if (name.length < 3) {
@@ -176,13 +177,13 @@ function Body() {
             igre: games
           }
           try {
-            const docRef = await addDoc(ref, data);
+            docRef = await addDoc(ref, data);
             console.log(docRef.id)
             //localStorage.setItem(1, docRef.id);
           } catch (err) {
             console.log(err);
           }
-          navigate("/tour"); 
+          navigate(`/tour/?id=${docRef.id}`); 
         } catch (error) {
           console.error(error);
         }
